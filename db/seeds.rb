@@ -23,8 +23,8 @@ puts "5 skills created"
 		title: "Portfolio Title: #{x}",
 		subtitle: "My Great Service",
 		body: Faker::Lorem.sentences(number: 2).join(" "),
-		thumb_image: "../app/assets/images/dummy_image.png",
-		main_image: "../app/assets/images/big_image.png"
+		thumb_image: "https://thumbs.dreamstime.com/b/boy-eating-spaghetti-28181732.jpg",
+		main_image: "https://thumbs.dreamstime.com/b/boy-eating-spaghetti-28181732.jpg"
 	)
 end
 
