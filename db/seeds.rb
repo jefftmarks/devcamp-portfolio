@@ -30,8 +30,8 @@ puts "5 skills created"
 		title: "Portfolio Title: #{x}",
 		subtitle: "Ruby on Rails",
 		body: Faker::Lorem.sentences(number: 2).join(" "),
-		thumb_image: "https://thumbs.dreamstime.com/b/boy-eating-spaghetti-28181732.jpg",
-		main_image: "https://thumbs.dreamstime.com/b/boy-eating-spaghetti-28181732.jpg"
+		thumb_image: "https://www.colorbook.io/imagecreator.php?width=350&height=200",
+		main_image: "https://www.colorbook.io/imagecreator.php?width=600&height=400"
 	)
 end
 
@@ -40,8 +40,8 @@ end
 		title: "Portfolio Title: #{x}",
 		subtitle: "Angular",
 		body: Faker::Lorem.sentences(number: 2).join(" "),
-		thumb_image: "https://thumbs.dreamstime.com/b/boy-eating-spaghetti-28181732.jpg",
-		main_image: "https://thumbs.dreamstime.com/b/boy-eating-spaghetti-28181732.jpg"
+		thumb_image: "https://www.colorbook.io/imagecreator.php?width=350&height=200",
+		main_image: "https://www.colorbook.io/imagecreator.php?width=600&height=400"
 	)
 end
 
