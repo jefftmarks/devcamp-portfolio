@@ -35,6 +35,8 @@ puts "5 skills created"
 	)
 end
 
+puts "8 portfolio items (Rails) created"
+
 1.times do |x|
 	Portfolio.create!(
 		title: "Portfolio Title: #{x}",
@@ -43,6 +45,12 @@ end
 		thumb_image: "https://www.colorbook.io/imagecreator.php?width=350&height=200",
 		main_image: "https://www.colorbook.io/imagecreator.php?width=600&height=400"
 	)
+
+	puts "1 portfolio items (Angular) created"
 end
 
-puts "9 portfolio items created"
+3.times do |x|
+	Portfolio.last.technologies.create!(name: "Technology #{x}")
+end
+
+puts "3 technologies created"
