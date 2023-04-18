@@ -2,7 +2,7 @@ require "faker"
 
 3.times do |x|
 	Topic.create!(
-		title: "Topic"
+		title: "Topic #{x}"
 	)
 end
 
