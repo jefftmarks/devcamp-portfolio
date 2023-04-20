@@ -1,0 +1,6 @@
+ <p><%= link_to portfolio.title, portfolio_show_path(portfolio) %></p>
+ <p><%= portfolio.subtitle %></p>
+ <p><%= portfolio.body %></p>
+ <%= image_tag(portfolio.thumb_image, style: "width: 200px") unless portfolio.thumb_image.nil? %>
+ <%= link_to "Edit", edit_portfolio_path(portfolio) %>
+ <%= link_to "Delete", portfolio, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
