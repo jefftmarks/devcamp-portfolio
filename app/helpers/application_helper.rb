@@ -15,4 +15,8 @@ module ApplicationHelper
 			content_tag(:p, greeting, class: "source-greeting")
 		end
 	end
+
+	def copyright_generator
+		DaxViewTool::Renderer.copyright("Dax-a-Doodle", "Your Wildest Dreams Come True")
+	end
 end
