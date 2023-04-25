@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="h-100" data-bs-theme="auto">
   <head>
     <title><%= @page_title %></title>
     <meta charset="utf-8">
@@ -16,12 +16,12 @@
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
 
       <%= render "shared/application_nav" %>
-      
-      <%= login_helper %>
 
       <%= yield %>
 
-      <%= copyright_generator %>
+      <footer class="mt-auto text-white-50">
+        <p><%= copyright_generator %></p>
+      </footer>
 
       <%= source_helper("application") %>
 
