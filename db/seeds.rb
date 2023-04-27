@@ -9,7 +9,7 @@ end
 10.times do |x|
 	Blog.create!(
 		title: "My Blog Post #{x}",
-		body: Faker::Lorem.paragraph,
+		body: Faker::Lorem.paragraph(sentence_count: 6),
 		topic_id: Topic.all.sample.id
 	)
 end
