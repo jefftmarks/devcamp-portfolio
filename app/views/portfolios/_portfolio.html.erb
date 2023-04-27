@@ -1,6 +1,11 @@
- <p><%= link_to portfolio.title, portfolio_show_path(portfolio) %></p>
- <p><%= portfolio.subtitle %></p>
- <p><%= portfolio.body %></p>
- <%= image_tag(portfolio.thumb_image, style: "width: 200px") unless portfolio.thumb_image.nil? %>
- <%= link_to "Edit", edit_portfolio_path(portfolio) if logged_in?(:site_admin) %>
- <%= link_to "Delete", portfolio, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } if logged_in?(:site_admin) %>
+<div class="col">
+	<div class="card shadow-sm">
+		<%= image_tag portfolio.thumb_image unless portfolio.thumb_image.nil? %>
+		<div class="card-body">
+			<p class="card-text">
+				<span><%= link_to portfolio.title, portfolio_show_path(portfolio) %></span>
+				<%= portfolio.subtitle %>
+			</p>
+		</div>
+	</div>
+</div>
