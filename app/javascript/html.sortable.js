@@ -1308,3 +1308,10 @@ var sortable = (function () {
   return sortable;
 
 }());
+
+let ready = function() {
+    sortable(document.querySelector('.sortable'));
+	return;
+};
+
+document.addEventListener("DOMContentLoaded", ready());
