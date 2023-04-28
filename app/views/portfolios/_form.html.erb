@@ -1,29 +1,40 @@
 <%= form_with(model: @portfolio_item) do |form| %>
-  <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="field">
+        <%= form.label :title, style: "display: block", class: "form-label" %>
+        <%= form.text_field :title, class: "form-control" %>
+      </div>
+
+      <div class="field">
+        <%= form.label :subtitle, style: "display: block", class: "form-label" %>
+        <%= form.text_field :subtitle, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="field">
+        <%= form.label :body, style: "display: block", class: "form-label" %>
+        <%= form.text_area :body, class: "form-control", rows: 10 %>
+      </div>
+    </div>
   </div>
 
-	<div>
-    <%= form.label :subtitle, style: "display: block" %>
-    <%= form.text_field :subtitle %>
-  </div>
+  <hr>
 
-  <div>
-    <%= form.label :body, style: "display: block" %>
-    <%= form.text_area :body %>
-  </div>
+  <div class="col-md-12">
+    <h2>Technologies Used</h2>
+    <div>
+      <%= form.fields_for :technologies do |tech| %>
+        <div class="field">
+          <%= tech.label :name, class: "form-label" %>
+          <%= tech.text_field :name, class: "form-control" %>
+        </div>
+      <% end %>
+    </div>
 
-  <ul>
-    <%= form.fields_for :technologies do |tech| %>
-      <li>
-        <%= tech.label :name %>
-        <%= tech.text_field :name %>
-      </li>
-    <% end %>
-  </ul>
-
-  <div>
-    <%= form.submit %>
+    <div>
+      <%= form.submit "Save Portfolio Item", class: "btn btn-primary col-12" %>
+    </div>
   </div>
 <% end %>
