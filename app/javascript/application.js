@@ -5,3 +5,5 @@ import "controllers"
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
+//= require jquery-ui
+import "./html.sortable"
